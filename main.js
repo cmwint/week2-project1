@@ -11,15 +11,27 @@
 // 1. Create an object called "me" that describes you with your name, city, and job title.
 
 console.log("Question 1");
-console.log(yourAnswer);
+var me = {
+  name: "Corinne",
+  city: "Denver",
+  jobTitle: "Front-end dev"
+};
+console.log(me);
 
 // 2. To your "me" object, add a key of "family" with the value being an array of three of your family members.
 // Example of desired output: { name: 'Bob Smith',
 //                              city: 'Denver',
 //                              jobTitle: 'professional wrestler',
 //                              family: ['Joan', 'Kyle', 'Hank'] }
+console.log("Question 2");
+me.family = ["Sandy", "Tom", "Emily", "Mho"];
+console.log(me);
+
 
 // 3. Using the "me" object, use two different methods of accessing your city.
+console.log("Question 3");
+console.log(me.city);
+console.log(me['city']);
 
 // Use the following Object for questions 4-9:
 var invitees = { adults: [{
@@ -57,61 +69,120 @@ var invitees = { adults: [{
                       };
 
 // 4. Access Penny's dinner choice (this will be the second item in his dinnerChoice array)
+console.log("Question 4");
+console.log(invitees.adults[0].dinnerChoice);
 
 // 5. Access Pablo's table number.
+console.log("Question 5");
+console.log(invitees.children[1].table);
 
 // 6. Access Lauren's seating specialConsideration.
+console.log("Question 6");
+console.log(invitees.adults[2].specialConsiderations.seating);
 
 // 7. Access Billy's dessert choice (this will be the third item in his dinnerChoice array)
+console.log("Question 7");
+console.log(invitees.adults[1].dinnerChoice[2]);
 
 // 8. Access Ada's allergies.
+console.log("Question 8");
+console.log(invitees.children[2].allergies);
 
 // 9. Create a string that reads Lauren's dinner choice in a sentence.
 // Desired result: "Lauren's appetizer is _______. She will be eating ______ for dinner
 // and has selected ________ as her dessert."
+console.log("Question 9");
+console.log('Lauren\'s appetizer is ' + invitees.adults[2].dinnerChoice[0] + '. She will be eating ' + invitees.adults[2].dinnerChoice[1] + ' for dinner and has selected ' + invitees.adults[2].dinnerChoice[2] + ' as her dessert.');
 
 // 10. Create an empty object called "jsWorkshop" using Constructor Notation.
+console.log("Question 10");
+var jsWorkshop = new Object();
+console.log(jsWorkshop);
 
 // 11. To your "jsWorkshop" object, assign a key of "classmates" with the value being an array of five your classmates.
+console.log("Question 11");
+jsWorkshop.classmates = ["Sam", "Vido", "Alex", "Lizzy", "Jenny"]
+console.log(jsWorkshop);
 
 // 12. Acesss the third classmate in your "jsWorkshop" object.
+console.log("Question 12");
+console.log(jsWorkshop.classmates[2]);
 
 // 13. Get the length of the fourth classmate's name.
+console.log("Question 13");
+console.log(jsWorkshop.classmates[3].length);
 
 // 14. Clear the classmates value.
+console.log("Question 14");
+jsWorkshop.classmates = [];
+console.log(jsWorkshop.classmates);
 
 // 15. Create an empty array called "books".
+console.log("Question 15");
+var books = [];
+theCircle = {
+  title: "The Circle",
+  author: "David Eggers",
+  pages: 345,
+};
+nightCircus = {
+  title: "The Night Circus",
+  author: "Erin Brownstein",
+  pages: 476
+};
+goneGirl = {
+  title: "Gone Girl",
+  author: "Gillian Flynn",
+  pages: 263
+};
+
+books = [theCircle, nightCircus, goneGirl]
+
+console.log(books);
 // Create three objects that contain book titles, their author, and number of pages.
 // Insert the three objects into the "books" array.
 // (Feel free to make up the titles. And the authors. Have fun. No pressure.)
 // Example of desired array: [ youHadMeAtWoof, bangkokHaunts, theCatcherInTheRye]
 // Example of desired object: {title: "You Had Me at Woof", author: "Julie Klum", pages: 207}
 // Final desired result:
-    var books = [{youHadMeAtWoof: {title: "You Had Me at Woof",
-                                  author: "Julie Klum",
-                                  pages: 207
-                                  },
-                   theCatcherInTheRye: {
-                                  title: "The Catcher in the Rye",
-                                  author: "JD Salinger",
-                                  pages: 214
-                                  },
-                   bangkokHaunts: {
-                                  title: "Bangkok Haunts",
-                                  author: "John Burdett",
-                                  pages: 569,
-                                  }
-                }]
+    // var books = [{youHadMeAtWoof: {title: "You Had Me at Woof",
+    //                               author: "Julie Klum",
+    //                               pages: 207
+    //                               },
+    //                theCatcherInTheRye: {
+    //                               title: "The Catcher in the Rye",
+    //                               author: "JD Salinger",
+    //                               pages: 214
+    //                               },
+    //                bangkokHaunts: {
+    //                               title: "Bangkok Haunts",
+    //                               author: "John Burdett",
+    //                               pages: 569,
+    //                               }
+    //             }]
 // 15a. Access the author of the first book.
+console.log("Question 15a");
+console.log(books[0].author);
 
 // 15b. Print the length of the author the the third book.
+console.log("Question 15b");
+console.log(books[2].author.length);
 
 // 16. To each book object variable, add a key of "dateRead" with a value of the year you read the book.
 // (Go ahead and make this up, too. Get wild.)
+console.log("Question 16");
+books[0].dateRead = 2015;
+books[1].dateRead = 1998;
+books[2].dateRead = 2006;
+console.log(books);
 
 // 17. Remove the second book from the books Array.
+console.log("Question 17");
+books[1] = '';
+console.log(books);
 
 // Bonus: Explain, in your own words, the difference between Literal Notation and Constructor.
+// Literal notation 
 
 // 17. Let's play a game. Create an object (like we did with the bike in class) and assign it at least five properties.
 // The class will guess what your object is based on it's properties.

@@ -186,17 +186,57 @@ console.log(books);
 
 // 17. Let's play a game. Create an object (like we did with the bike in class) and assign it at least five properties.
 // The class will guess what your object is based on it's properties.
+console.log("Question 17-2");
+var descriptionMe = {
+  hair: "blonde",
+  eyes: "blue",
+  race: "caucasian",
+  height: "5'5",
+  vocal: "quiet"
+}
+console.log(descriptionMe);
 
 // You're a zookeeper and keeping a detailed log of each of the animals in your zoo.
 // 18. Create an empty object called "zoo"
+console.log("Question 18");
+var zoo = {};
+console.log(zoo);
 
 // 19. Create assign three animals as your keys in the "zoo" object. The values of the animals should be empty objects.
 
+console.log("Question 19");
+zoo.monkey = {};
+zoo.lion = {};
+zoo.giraffe = {};
+console.log(zoo);
+
 // 20. Within each animal empty object, assign a key/value pair of "timeSlept" and a number indicating the hours of sleep each animal got. (Make this up, obvi)
+
+console.log("Question 20");
+zoo.monkey.timeSlept = 272;
+zoo.lion.timeSlept = 35;
+zoo.giraffe.timeSlept = 164;
+console.log(zoo);
 
 // 21. Within each animal object, assign a object pair consisting of a key called "meals" and an empty array as the value.
 
+console.log("Question 21");
+zoo.monkey.meals = [];
+zoo.lion.meals = [];
+zoo.giraffe.meals = [];
+console.log(zoo);
+
 // 22. Within each animal's meals array, create two objects with keys of "monday" and "wednesday". You only feed those jerks twice a week. It's fine.
+
+console.log("Question 22");
+var monday = new Object;
+monday.monday = new Object();
+var wednesday = new Object;
+wednesday.wednesday = new Object();
+zoo.giraffe.meals.push(monday, wednesday);
+zoo.monkey.meals.push(monday, wednesday);
+zoo.lion.meals.push(monday, wednesday);
+console.log(zoo);
 
 // 23. In the individual days of the week, create an object with the key of each meal ("breakfast", "lunch", "dinner") and a made up value of what they ate.
 // That array should look like this (within the meals object, within the animal object, within the zoo object):
@@ -211,21 +251,85 @@ console.log(books);
     dinner: "I put my thing down, flip it, and reverse it"
   }}]
 
+console.log("Question 23");
+zoo.giraffe.meals[0].monday.breakfast = "cheetos on top of greek yogurt";
+zoo.giraffe.meals[0].monday.lunch = "6 gallons of Diet Coke";
+zoo.giraffe.meals[0].monday.dinner = "leftover lasagna";
+
+zoo.giraffe.meals[1].wednesday.breakfast = "cashews";
+zoo.giraffe.meals[1].wednesday.lunch = "diced apples";
+zoo.giraffe.meals[1].wednesday.dinner = "tuna";
+
+zoo.lion.meals[0].monday.breakfast = "grapes";
+zoo.lion.meals[0].monday.lunch = "BubbleYum";
+zoo.lion.meals[0].monday.dinner = "a ham and cheddar lunchable";
+
+zoo.lion.meals[1].wednesday.breakfast = "pickles";
+zoo.lion.meals[1].wednesday.lunch = "peanuts";
+zoo.lion.meals[1].wednesday.dinner = "red cabbage";
+
+zoo.monkey.meals[0].monday.breakfast = "blueberries";
+zoo.monkey.meals[0].monday.lunch = "dates";
+zoo.monkey.meals[0].monday.dinner = "succotash";
+
+zoo.monkey.meals[1].wednesday.breakfast = "peas";
+zoo.monkey.meals[1].wednesday.lunch = "bruschetta";
+zoo.monkey.meals[1].wednesday.dinner = "okras";
+
+console.log(zoo);
+
 // 24. Damn it. The night zookeeper just informed you that your second animal took a nap right before bed time. Add two hours to his "timeSlept" value.
+
+console.log("Question 24");
+zoo.lion.timeSlept += 342;
+console.log(zoo);
 
 // 25. To each animal object, add a "favoriteActivities" key with the value being an array of three of his/her favorite activities.
 
+console.log("Question 25");
+zoo.monkey.favoriteActivities = ["eat", "sleep", "poop"];
+zoo.giraffe.favoriteActivities = ["Sleep standing up", "run", "drink water"];
+zoo.lion.favoriteActivities = ["growl", "hunting", "stalking/abushing prey"];
+console.log(zoo);
+
 // 26. Your first animal just tossed his lunch at the zoo visitors. Change his monday lunch value to an empty string.
+console.log("Question 26");
+zoo.giraffe.meals[0].monday.lunch = "";
+console.log(zoo);
 
 // 27. You know your "zoo" object? The owner wants to add zookeepers to the object, too. But before we do that, we need to make sure
 // the animals stay separate from the zookeepers. To do this, create an object within the "zoo" object. The key will be "animals" and the value will be an array
 // containing the three animals you already defined.
 
+console.log("Question 27");
+zoo.animals = new Object();
+zoo.animals = [zoo.monkey, zoo.lion, zoo.giraffe];
+delete zoo.monkey;
+delete zoo.giraffe;
+delete zoo.lion;
+console.log(zoo);
+
 // 28. To the "zoo" object, add an object named "zookeepers" with the value being and empty object.
 
-// 29. To the empty "zookeepers" object, add two objects with their keys being two names and their values being an empty object.
+console.log("Question 28");
+zoo.zookeepers = new Object();
+console.log(zoo);
 
-// 30. This joker wants you to add the "hireDate" for each zookeeper. Within the empty array attached to each name, assign a key/value pair of "hireDate" and the value being a string of hire date.
+// 29. To the empty "zookeepers" object, add two objects with their keys being two names
+// and their values being an empty object.
+
+console.log("Question 29");
+zoo.zookeepers.tom = new Object();
+zoo.zookeepers.fred = new Object();
+console.log(zoo);
+
+// 30. This joker wants you to add the "hireDate" for each zookeeper. Within the empty array
+// attached to each name, assign a key/value pair of "hireDate" and the value being a string of hire date.
+
+console.log("Question 30");
+zoo.zookeepers.tom.hireDate = "May 14, 2015";
+zoo.zookeepers.fred.hireDate = "June 16, 2012";
+console.log(zoo);
 
     
     

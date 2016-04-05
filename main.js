@@ -70,7 +70,7 @@ var invitees = { adults: [{
 
 // 4. Access Penny's dinner choice (this will be the second item in his dinnerChoice array)
 console.log("Question 4");
-console.log(invitees.adults[0].dinnerChoice);
+console.log(invitees.adults[0].dinnerChoice[1]);
 
 // 5. Access Pablo's table number.
 console.log("Question 5");
@@ -86,7 +86,7 @@ console.log(invitees.adults[1].dinnerChoice[2]);
 
 // 8. Access Ada's allergies.
 console.log("Question 8");
-console.log(invitees.children[2].allergies);
+console.log(invitees.children[2].allergies[0]);
 
 // 9. Create a string that reads Lauren's dinner choice in a sentence.
 // Desired result: "Lauren's appetizer is _______. She will be eating ______ for dinner
@@ -120,23 +120,23 @@ console.log(jsWorkshop.classmates);
 // 15. Create an empty array called "books".
 console.log("Question 15");
 var books = [];
-theCircle = {
-  title: "The Circle",
-  author: "David Eggers",
-  pages: 345,
-};
-nightCircus = {
-  title: "The Night Circus",
-  author: "Erin Brownstein",
-  pages: 476
-};
-goneGirl = {
-  title: "Gone Girl",
-  author: "Gillian Flynn",
-  pages: 263
-};
+books.theCircle = {};
+var book1 = books.theCircle
+book1.title = "The Circle";
+book1.author = "David Eggers";
+book1.pages = 345;
 
-books = [theCircle, nightCircus, goneGirl]
+books.nightCircus = {};
+var book2 = books.nightCircus
+book2.title = "The Night Circus";
+book2.author = "Erin Brownstein";
+book2.pages = 476;
+
+books.goneGirl = {};
+var book3 = books.goneGirl
+book3.title = "Gone Girl";
+book3.author = "Gillian Flynn";
+book3.pages = 263;
 
 console.log(books);
 // Create three objects that contain book titles, their author, and number of pages.
@@ -162,23 +162,23 @@ console.log(books);
     //             }]
 // 15a. Access the author of the first book.
 console.log("Question 15a");
-console.log(books[0].author);
+console.log(books.theCircle.author);
 
 // 15b. Print the length of the author the the third book.
 console.log("Question 15b");
-console.log(books[2].author.length);
+console.log(books.goneGirl.author.length);
 
 // 16. To each book object variable, add a key of "dateRead" with a value of the year you read the book.
 // (Go ahead and make this up, too. Get wild.)
 console.log("Question 16");
-books[0].dateRead = 2015;
-books[1].dateRead = 1998;
-books[2].dateRead = 2006;
+book1.dateRead = 2015;
+book2.dateRead = 1998;
+book3.dateRead = 2006;
 console.log(books);
 
 // 17. Remove the second book from the books Array.
 console.log("Question 17");
-books[1] = '';
+delete books.nightCircus;
 console.log(books);
 
 // Bonus: Explain, in your own words, the difference between Literal Notation and Constructor.
@@ -302,25 +302,22 @@ console.log(zoo);
 // containing the three animals you already defined.
 
 console.log("Question 27");
-zoo.animals = new Object();
-zoo.animals = [zoo.monkey, zoo.lion, zoo.giraffe];
-delete zoo.monkey;
-delete zoo.giraffe;
-delete zoo.lion;
+var cuddlyGuys = zoo;
+zoo = {animals: cuddlyGuys};
 console.log(zoo);
 
 // 28. To the "zoo" object, add an object named "zookeepers" with the value being and empty object.
 
 console.log("Question 28");
-zoo.zookeepers = new Object();
+zoo.zookeepers = {}
 console.log(zoo);
 
 // 29. To the empty "zookeepers" object, add two objects with their keys being two names
 // and their values being an empty object.
 
 console.log("Question 29");
-zoo.zookeepers.tom = new Object();
-zoo.zookeepers.fred = new Object();
+zoo.zookeepers.tom = {};
+zoo.zookeepers.fred = {};
 console.log(zoo);
 
 // 30. This joker wants you to add the "hireDate" for each zookeeper. Within the empty array
